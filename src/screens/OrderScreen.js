@@ -6,12 +6,13 @@ const OrderScreen = (props) => {
   return  (
       <ScrollView style={styles.main}>
          <View style={styles.one}>
-            <FontAwesome.Button name="bell" size={25} backgroundColor="#000" onPress={() => {}}></FontAwesome.Button>
+            <FontAwesome name="bell" size={25} backgroundColor="white" onPress={() => {}}></FontAwesome>
          </View>
 
          <View style={styles.two}>
              <Text style={{fontSize: 25, color: 'white', marginTop: 20}}>Order booked successfully</Text>
              <Text style={{fontSize: 15, color: 'white', marginTop: 20}}>ORDER ID: XXXXXXXXX145</Text>
+             <FontAwesome name="history" color='#fff' size={26}/>
              <Text style={{fontSize: 20, color: 'white', marginTop: 20}}>Delivery Details</Text>
              <View style={{flex:2, flexDirection: 'row'}}>
                     <View style={{flex:1}}>
@@ -20,7 +21,7 @@ const OrderScreen = (props) => {
                         <Text style={{fontSize: 15, color: 'grey', marginTop: 30}}>CUSTOMER NAME</Text>
                         <Text style={{fontSize: 14, color: 'white', marginTop: 5}}>Mr. Sahil Singh</Text>
                     </View>
-                    <View style={{flex:1, marginHorizontal: 0}}>
+                    <View style={styles.qr}>
                         <Image style={styles.img2} source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAxFQyJLUt-38s5_YmRzuiGFTmSEJnMJ-cWQ&usqp=CAU'}}/>
                     </View>
             </View>
@@ -72,7 +73,21 @@ const styles = StyleSheet.create({
         flex: 1,
         borderRadius: 10,
         marginHorizontal: 60        
+    },
+    qr:{
+        flex:1,
+        marginHorizontal: 0,        
     }
 });
 
 export default OrderScreen;
+
+    {/* position: 'absolute',
+        top: 0,
+        left: 0,
+        height: 25,
+        width: 25,
+        borderColor: '#FFFFFF',
+        borderLeftWidth: 3,
+        borderTopWidth: 3,
+        padding: 10, */}

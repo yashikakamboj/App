@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity} from '
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Feather } from '@expo/vector-icons'; 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-
+//flexDirection: 'column', alignItems: 'flex-start'
 const HelpScreen =()=>{
     return(
         <ScrollView style={{backgroundColor: 'black', flex:1}}>
@@ -18,9 +18,9 @@ const HelpScreen =()=>{
              <TextInput style={styles.input}/>
              <Text style={styles.text}>Enquiry Detail</Text>
              
-            <Text style={{ backgroundColor: 'grey', color: 'white', padding: 8, marginTop: 15, lineHeight: 17 }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-            </Text>
+            <TextInput style={{height: 300, backgroundColor: 'grey', color: 'white', padding: 8, marginTop: 15, lineHeight: 17 }}
+               placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+            />
             <TouchableOpacity style={styles.btn}>
               <Text style={{color: "white", fontSize: 17}}>Submit</Text>
             </TouchableOpacity>
