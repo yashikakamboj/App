@@ -1,10 +1,12 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import Delivery from './src/screens/Delivery';
 import FormScreen from './src/screens/FormScreen';
 import HelpScreen from './src/screens/HelpScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import OrderScreen from './src/screens/OrderScreen';
+import Time from './src/screens/Time';
 
 const Navigation = createStackNavigator(
   {
@@ -12,6 +14,8 @@ const Navigation = createStackNavigator(
         Order: OrderScreen,
         Form: FormScreen,
         Help: HelpScreen,
+        Time: Time,
+        Delivery: Delivery,
   },
   {
         initialRouteName: "Home",

@@ -21,6 +21,16 @@ const HomeScreen = (props) => {
               onPress={()=> props.navigation.navigate('Help') } >
               <Text style={styles.text}>Help Center</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=> props.navigation.navigate('Time') } >
+              <Text style={styles.text}>Break time</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=> props.navigation.navigate('Delivery') } >
+              <Text style={styles.text}>Delivery</Text>
+          </TouchableOpacity>
         </View>
         </SafeAreaView>
   );
