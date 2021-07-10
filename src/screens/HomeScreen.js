@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, Button, TouchableOpacity} from "react-native";
+import { Text, StyleSheet, View, Modal, TouchableOpacity} from "react-native";
 import SafeAreaView from 'react-native-safe-area-view';
 
 const HomeScreen = (props) => {
@@ -35,6 +35,16 @@ const HomeScreen = (props) => {
               style={styles.btn}
               onPress={()=> props.navigation.navigate('Driver') } >
               <Text style={styles.text}>Driver Medicine Screen</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=> props.navigation.navigate('Client') } >
+              <Text style={styles.text}>Client Medicine Screen</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=>{props.navigation.navigate('Popup')}} >
+              <Text style={styles.text}>Pop Up</Text>
           </TouchableOpacity>
         </View>
         </SafeAreaView>
