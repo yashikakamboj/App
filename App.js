@@ -3,13 +3,13 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import ClientMedicine from './src/screens/ClientMedicine';
 import Delivery from './src/screens/Delivery';
+import DeliveryPreference from './src/screens/DeliveryPreference';
 import DriverMedicine from './src/screens/DriverMedicine';
 import FormScreen from './src/screens/FormScreen';
 import HelpScreen from './src/screens/HelpScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import OrderScreen from './src/screens/OrderScreen';
 import Popup from './src/screens/Popup';
-//import SlideButton from './src/screens/SlideButton';
 import Time from './src/screens/Time';
 
 const Navigation = createStackNavigator(
@@ -22,7 +22,7 @@ const Navigation = createStackNavigator(
         Delivery: Delivery,
         Driver: DriverMedicine,
         Client: ClientMedicine,
-        //Button: SlideButton,
+        Delivery2: DeliveryPreference,
         Popup: Popup
       
   },

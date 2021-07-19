@@ -46,6 +46,11 @@ const HomeScreen = (props) => {
               onPress={()=>{props.navigation.navigate('Popup')}} >
               <Text style={styles.text}>Pop Up</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=> props.navigation.navigate('Delivery2') } >
+              <Text style={styles.text}>Delivery reference</Text>
+          </TouchableOpacity>
         </View>
         </SafeAreaView>
   );
@@ -63,7 +68,6 @@ const styles = StyleSheet.create({
         marginHorizontal: 40,
         borderColor: '#808080',
         borderWidth: 1,
-
   },
   text:{
       color: "white",
