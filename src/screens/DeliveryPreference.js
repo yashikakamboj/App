@@ -1,3 +1,4 @@
+// Driver App (Delivery Preference Screen)
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, FlatList, Alert} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
@@ -17,11 +18,6 @@ const DeliveryPreference = ()=>{
         {time: "12:00 AM to 4:00 PM", id: '4'},
         {time: "4:00 AM to 8:00 AM", id: '5'},
     ]);
-
-    press_on = ({one})=>{
-        
-
-    }
 
     onChangeValue = (itemSelected , index)=>{
         const newData = data.map(item =>{

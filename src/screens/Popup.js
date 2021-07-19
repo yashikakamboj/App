@@ -1,7 +1,7 @@
+// Client App (popUP Star Screen)
 import React, { useState } from 'react';
 import { View, Text, Modal, Button, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
-//import Stars from 'react-native-stars';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Rating, AirbnbRating } from 'react-native-elements';
 
@@ -114,15 +114,3 @@ const styles = StyleSheet.create({
     }
 })
 export default Popup;
-
-{/*
-                                    <Stars
-                                        default={2.5}
-                                        count={5}
-                                        half={true}
-                                        starSize={60}
-                                        fullStar={<Icon name={'star'} style={[styles.myStarStyle]}/>}
-                                        emptyStar={<Icon name={'star-outline'} style={[styles.myStarStyle, styles.myEmptyStarStyle]}/>}
-                                        halfStar={<Icon name={'star-half'} style={[styles.myStarStyle]}/>}
-                                    />
-*/}

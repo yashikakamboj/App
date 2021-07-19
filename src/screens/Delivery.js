@@ -1,3 +1,4 @@
+// DRiver App (Delivery confirmation)
 import React, {useState} from 'react';
 import {Text, TouchableOpacity, View, StyleSheet, Image, Dimensions, FlatList, ScrollView} from 'react-native';
 

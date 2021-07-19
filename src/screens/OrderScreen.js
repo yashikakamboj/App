@@ -1,3 +1,4 @@
+// Merchant (Order details)
 import React from "react";
 import { Text, StyleSheet, View, ScrollView, TouchableOpacity, Image} from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome';

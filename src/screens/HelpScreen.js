@@ -1,9 +1,10 @@
+// Merchant (Help Center Screen)
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Feather } from '@expo/vector-icons'; 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
-//flexDirection: 'column', alignItems: 'flex-start'
+
 const HelpScreen =()=>{
     return(
         <ScrollView style={{backgroundColor: 'black', flex:1}}>

@@ -1,6 +1,6 @@
+// Driver App (Medicine Screen)
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions, ScrollView} from 'react-native';
-//import { ScrollView } from 'react-native-gesture-handler';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
  
 

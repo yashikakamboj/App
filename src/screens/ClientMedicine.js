@@ -1,7 +1,7 @@
+// Client App (Medicine Screen)
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-//import { RadioButton} from 'react-native-paper';
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 
 const ClientMedicine =()=>{
