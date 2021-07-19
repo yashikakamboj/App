@@ -2,6 +2,7 @@ import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import ClientMedicine from './src/screens/ClientMedicine';
+import ClientOrderHistory from './src/screens/ClientOrderHistory';
 import Delivery from './src/screens/Delivery';
 import DeliveryPreference from './src/screens/DeliveryPreference';
 import DriverMedicine from './src/screens/DriverMedicine';
@@ -23,8 +24,8 @@ const Navigation = createStackNavigator(
         Driver: DriverMedicine,
         Client: ClientMedicine,
         Delivery2: DeliveryPreference,
-        Popup: Popup
-      
+        Popup: Popup,
+        Client2: ClientOrderHistory,
   },
   {
         initialRouteName: "Home",

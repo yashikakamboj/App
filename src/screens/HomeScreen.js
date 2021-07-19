@@ -51,6 +51,11 @@ const HomeScreen = (props) => {
               onPress={()=> props.navigation.navigate('Delivery2') } >
               <Text style={styles.text}>Delivery reference</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=> props.navigation.navigate('Client2') } >
+              <Text style={styles.text}>Client Order History</Text>
+          </TouchableOpacity>
         </View>
         </SafeAreaView>
   );

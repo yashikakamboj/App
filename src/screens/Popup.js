@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { View, Text, Modal, Button, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Rating, AirbnbRating } from 'react-native-elements';
 
 const Popup = ()=>{
@@ -14,7 +13,9 @@ const Popup = ()=>{
             <Button title="change" onPress={()=>{setX(true)}}></Button>
                 <Modal transparent={true} visible={X}>
                     <View style={styles.popup}>
-                        <Entypo name="circle-with-cross" size={35} backgroundColor="#000" onPress={()=>{setX(false)}} style={{marginLeft: 270, zIndex: 1, position:"absolute",}}></Entypo>
+                        <TouchableOpacity style={{top:-7,right:-7,width:30,height:30, borderRadius:100,alignItems: 'center',justifyContent: 'center', backgroundColor: 'white', position:"absolute", alignContent: 'center', textAlign: 'center'}}>
+                        <Entypo name="circle-with-cross" color={'red'} size={32} onPress={()=>{setX(false)}} ></Entypo>
+                        </TouchableOpacity>
                             <View style={styles.container}>                        
                                 <View style={styles.row}>
                                     <View>
@@ -22,7 +23,7 @@ const Popup = ()=>{
                                     </View>
                                     <View style={{flexDirection: 'column'}}>
                                         <Text style={styles.text}>Merchant Name</Text>
-                                        <Rating startingValue="{3.3}" imageSize={35} tintColor="#3B3B3B" style={styles.star}/>
+                                        <Rating startingValue="{3.3}" imageSize={32} tintColor="#3B3B3B" style={styles.star}/>
                                     </View>
                                 </View>
                                 <View style={styles.row}>
@@ -31,7 +32,7 @@ const Popup = ()=>{
                                     </View>
                                     <View style={{flexDirection: 'column'}}>
                                         <Text style={styles.text}>Driver Name</Text>
-                                        <Rating startingValue="{3.3}" imageSize={35} tintColor="#3B3B3B" style={styles.star}/> 
+                                        <Rating startingValue="{3.3}" imageSize={32} tintColor="#3B3B3B" style={styles.star}/> 
                                     </View>
                                 </View>
                                 <TouchableOpacity style={styles.btn}>
