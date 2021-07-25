@@ -1,11 +1,11 @@
 import React from "react";
-import { Text, StyleSheet, View, Modal, TouchableOpacity} from "react-native";
+import { Text, StyleSheet, View, Modal, TouchableOpacity, ScrollView} from "react-native";
 import SafeAreaView from 'react-native-safe-area-view';
 
 const HomeScreen = (props) => {
   return  (
       <SafeAreaView style={{backgroundColor: 'black', flex: 1}}>
-      <View >
+      <ScrollView >
           <TouchableOpacity
               style={styles.btn}
               onPress={()=> props.navigation.navigate('Form') } >
@@ -56,7 +56,23 @@ const HomeScreen = (props) => {
               onPress={()=> props.navigation.navigate('Client2') } >
               <Text style={styles.text}>Client Order History</Text>
           </TouchableOpacity>
-        </View>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=> props.navigation.navigate('Chat') } >
+              <Text style={styles.text}>Chat Screen</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=> props.navigation.navigate('Chat2') } >
+              <Text style={styles.text}>Chatting Screen</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+              style={styles.btn}
+              onPress={()=> props.navigation.navigate('Api') } >
+              <Text style={styles.text}>API Integration</Text>
+          </TouchableOpacity>
+
+        </ScrollView>
         </SafeAreaView>
   );
 };

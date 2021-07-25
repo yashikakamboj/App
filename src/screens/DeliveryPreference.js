@@ -98,6 +98,15 @@ const DeliveryPreference = ()=>{
         );
     };
 
+    const renderitems = ({item, index})=>{
+        return(
+            <TouchableOpacity style={item.selected ? styles.selected : styles.notselected} onPress={()=>{onChangeValue(item, index)}}>
+                <AntDesign name="clockcircleo" size={20} color="#BBC4C2" style={{marginLeft: 30}}/>
+                <Text style={styles.listText}> {item.time} </Text>
+            </TouchableOpacity>
+        );
+    }
+
     return(
         <View>
             <FlatList
@@ -105,14 +114,7 @@ const DeliveryPreference = ()=>{
                 ListHeaderComponent={getHeader}
                 ListFooterComponent={getFooter}
                 style={{backgroundColor: 'black'}}
-                renderItem={({item, index})=>{
-                    return(
-                        <TouchableOpacity style={item.selected ? styles.selected : styles.notselected} onPress={()=>{onChangeValue(item, index)}}>
-                            <AntDesign name="clockcircleo" size={20} color="#BBC4C2" style={{marginLeft: 30}}/>
-                            <Text style={styles.listText}> {item.time} </Text>
-                        </TouchableOpacity>
-                    );
-                }}
+                renderItem={renderitems}
             />
         </View>
     );

@@ -1,6 +1,9 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import API from './src/screens/API';
+import ChatScreen from './src/screens/ChatScreen';
+import Chatting from './src/screens/Chatting';
 import ClientMedicine from './src/screens/ClientMedicine';
 import ClientOrderHistory from './src/screens/ClientOrderHistory';
 import Delivery from './src/screens/Delivery';
@@ -26,6 +29,9 @@ const Navigation = createStackNavigator(
         Delivery2: DeliveryPreference,
         Popup: Popup,
         Client2: ClientOrderHistory,
+        Chat: ChatScreen,
+        Chat2: Chatting,
+        Api: API,
   },
   {
         initialRouteName: "Home",

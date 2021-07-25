@@ -6,6 +6,13 @@ import {Text, TouchableOpacity, View, StyleSheet, Image, Dimensions, FlatList, S
 const Delivery =()=>{
     
     const [List, setList] = useState(false)
+
+    const renderitems = ({item}) => 
+        <TouchableOpacity style={styles.listbtn}>
+            <Text style={styles.listText}>
+                {item.key}
+            </Text>
+        </TouchableOpacity>
         
     return(
         
@@ -26,7 +33,7 @@ const Delivery =()=>{
                     style={[styles.btn, {backgroundColor: 'red', marginBottom: 0}]} >
                     <Text style={styles.text}>Order refused</Text>
                 </TouchableOpacity>
-                {List ? <FlatList data={[{key: 'Not available'}, {key: 'Fund not available'}, {key: 'Denied'}]} renderItem={({item}) => <TouchableOpacity style={styles.listbtn}><Text style={styles.listText}>{item.key}</Text></TouchableOpacity>}/> : null}
+                {List ? <FlatList data={[{key: 'Not available'}, {key: 'Fund not available'}, {key: 'Denied'}]} renderItem={renderitems}/> : null}
             </View>
         </View>
         

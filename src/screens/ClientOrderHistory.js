@@ -5,6 +5,27 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Rating, AirbnbRating } from 'react-native-elements';
 
 const ClientOrderHistory = ()=>{
+    const renderitems = ({item})=>{
+        return(
+            <View style={styles.card}>
+                <View style={{flex: 1,}}>
+                    <Text style={styles.whiteHeading}>{item.name}</Text>
+                    <Text style={styles.grey}>ORDER ID</Text>
+                    <Text style={styles.white}>{item.orderId}</Text>
+                    <Text style={styles.grey}>Delivery Time</Text>
+                    <Text style={styles.white}>{item.time}</Text>
+                    <Text style={styles.grey}>Delivery Type</Text>
+                    <Text style={styles.white}>{item.type}</Text>
+                </View>
+                <View style={{flex: 1, alignItems: 'flex-end'}}>
+                    <Image style={styles.img} source={{uri: "https://www.vhv.rs/dpng/d/145-1451043_capsule-with-contents-open-capsule-png-transparent-png.png"}}/>
+                    <Text style={styles.grey}>CASH PAID</Text>
+                    <Text style={styles.white}>{item.amount}</Text>
+                    <Rating startingValue="{3.3}" imageSize={32} tintColor="#3B3B3B" style={styles.star}/> 
+                </View>
+            </View>
+        );
+    }
     return(
         <View style={styles.main}>
             <View style={styles.one}>
@@ -14,27 +35,7 @@ const ClientOrderHistory = ()=>{
             <FlatList
                 data = {data}
                 keyExtractor = {(item)=>{item.orderId}}
-                renderItem={({item})=>{
-                    return(
-                        <View style={styles.card}>
-                            <View style={{flex: 1,}}>
-                                <Text style={styles.whiteHeading}>{item.name}</Text>
-                                <Text style={styles.grey}>ORDER ID</Text>
-                                <Text style={styles.white}>{item.orderId}</Text>
-                                <Text style={styles.grey}>Delivery Time</Text>
-                                <Text style={styles.white}>{item.time}</Text>
-                                <Text style={styles.grey}>Delivery Type</Text>
-                                <Text style={styles.white}>{item.type}</Text>
-                            </View>
-                            <View style={{flex: 1, alignItems: 'flex-end'}}>
-                                <Image style={styles.img} source={{uri: "https://www.vhv.rs/dpng/d/145-1451043_capsule-with-contents-open-capsule-png-transparent-png.png"}}/>
-                                <Text style={styles.grey}>CASH PAID</Text>
-                                <Text style={styles.white}>{item.amount}</Text>
-                                <Rating startingValue="{3.3}" imageSize={32} tintColor="#3B3B3B" style={styles.star}/> 
-                            </View>
-                        </View>
-                    );
-                }}
+                renderItem ={renderitems}
             />
         </View>
     )
