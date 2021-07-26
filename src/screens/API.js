@@ -1,34 +1,54 @@
-{/*import React, {useState, useEffect} from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, FlatList} from 'react-native';
-import axios from 'axios';
-
-const BASE_URL = 'https://dummyapi.io/data/api';
-const APP_ID = '6081e175a7541617d41334a';
-
-useEffect(() => {
-    axios.get(`${BASE_URL}/user`, { headers: { 'app-id': APP_ID } })
-        .then((res) => res.json())
-        .then((resJson)=>{setData(resJson)})
-        .catch(console.error)
-        
-}, []);
-
-const renderitems =(item)=>{
-    return(
-        <Text>{item.title}</Text>
-    )
-}
+import React, {useState, useEffect} from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, FlatList, ActivityIndicator} from 'react-native';
+const movieURL = "https://reactnative.dev/movies.json";
 
 const API =()=>{
 
+    const [loading, setloading] = useState(true);
     const [data, setData] = useState([]);
+    const [title, setTitle] = useState([]);
 
+    useEffect(() => {
+        fetch(movieURL)
+        .then((response) => response.json())
+        .then((json) => {
+            // console.log("json",json.movies);
+            setData(json.movies)
+            setTitle(json.title)
+            setloading(false)
+        })
+        .catch((error) => {
+            console.error("error here", error );
+        });
+        
+    },[]);
+
+    console.log("title",title)
+    console.log("movies",data)
+
+
+    const Item=(title,releaseYear)=>{
+       return( 
+            <View style={{backgroundColor:"blue"}}>
+                <Text style={{color:"red"}}>{title}</Text>
+                <Text style={{color:"red"}}>{releaseYear}</Text>
+            </View>
+        )
+    }
+    const renderItem =({item})=>(
+         <Item 
+            title={item.title}
+            releaseYear={item.releaseYear}
+       />
+    )
+    
     return(
         <View>
-            <FlatList
+            <Text style={{color:"red"}}>{title}</Text>
+             <FlatList
                 data={data}
-                keyExtractor={item=>{ `key-${item.id}` }}
-                renderItem={renderitems}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
             />
         </View>
     )
@@ -40,4 +60,3 @@ const styles = StyleSheet.create({
 });
 
 export default API;
-*/}
